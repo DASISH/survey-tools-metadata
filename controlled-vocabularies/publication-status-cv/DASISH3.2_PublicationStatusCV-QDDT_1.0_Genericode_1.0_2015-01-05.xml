@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="CodeList.xsl"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ESSERIC-CV="urn:ESSERIC-CV" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd">
+    <Annotation>
+        <Description>
+            <h:div xml:lang="eng-GB" class="Heading">
+                <h:p>DASISH WP3.2 QDDT: Controlled vocabulary for publication status</h:p>
+            </h:div>
+            <h:div xml:lang="eng-GB" class="Description">
+                <h:p>The controlled vocabulary for publication status in the QDDT has been developed for the ESS and SHARE, but could also be used by other surveys. As a first step it is intended to be used for questionnaire modules, instruments, question schemes and questions. It will be considered later whether they would prove useful for other metadata elements as well.</h:p>
+            </h:div>             
+            <h:div xml:lang="eng-GB" class="VersionNotes">
+                <h:p></h:p>
+            </h:div>
+            <h:div xml:lang="eng-GB" class="VersionChanges">
+                <h:p></h:p>
+            </h:div>
+        </Description>
+    </Annotation>
+    <Identification>
+        <ShortName>PublicationStatusCV</ShortName>
+        <LongName xml:lang="eng-GB">Controlled Vocabulary for publication status</LongName>
+        <Version>1.0</Version>
+        <CanonicalUri>urn:esseric-cv:PublicationStatusCV-QDDT</CanonicalUri>
+        <CanonicalVersionUri>urn:esseric-cv:PublicationStatusCV-QDDT:1.0</CanonicalVersionUri>
+        <!-- Fake Uri for now, will be changed after the server is ready -->
+        <LocationUri>https://dasish-dev.nsd.no/api/ddi/PublicationStatusCV-QDDT_1.0_Genericode_1.0.xml</LocationUri>
+        <AlternateFormatLocationUri MimeType="text/html">https://dasish-dev.nsd.no/api/ddi/PublicationStatusCV-QDDT_1.0.htm</AlternateFormatLocationUri>
+        <AlternateFormatLocationUri MimeType="application/vnd.ms-excel">https://dasish-dev.nsd.no/api/ddi/PublicationStatusCV-QDDT_1.0.xlsx</AlternateFormatLocationUri>
+        <!-- Fake above -->
+        <Agency>
+            <ShortName>ESSERIC</ShortName>
+            <LongName xml:lang="eng-GB">European Social Survey Eric</LongName>
+            <Identifier>DDIForESSERIC</Identifier>
+        </Agency>
+    </Identification>
+    
+    <ColumnSet>
+        <Column Use="required" Id="Code">
+            <ShortName>Code</ShortName>
+            <LongName xml:lang="eng-GB">Value of the Code</LongName>
+            <Data Type="string"/>    
+        </Column>
+        <Column Use="required" Id="Definition">
+            <ShortName>Definition</ShortName>
+            <LongName xml:lang="eng-GB">Definition of the Code</LongName>
+            <Data Type="string"/>
+        </Column>
+    </ColumnSet>
+    
+    <SimpleCodeList>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>Development.NotPublished</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">Development – Made available for the key members of the CST questionnaire design sub group, but not designed to be published internally.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>InternalPublication.AvailableForDesignTeam</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">AvailableForDesignTeam – Items and discussion made available internally for members of the relevant Questionnaire/Module Design Team to view and comment on.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>InternalPublication.ExportToSQP</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">ExportToSQP – Items made available for ‘export’ to SQP for coding. The results from SQP will  provide guidance to further development of the item, and may be used at multiple stages of the questionnaire process. Final items will also be exported to SQP.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>InternalPublication.AvailableForNationalTeams</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">AvailableForNationalTeams – Items and their development histories made available to National teams to view. They will be asked to comment, but these comments will only be added to the QDDT by the team at ESS HQ. There may be some aspects of the development history that we would like to ‘hide’ from national teams.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>InternalPublication.ExportToTMT</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">ExportToTMT – Items made available for ‘export’ to TMT for translation. Items may be exported to the TMT at various times in the questionnaire design lifecycle, for example when questionnaires for pre-testing are produced (this may only be a selection of items) and when items are finalized.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>ExternalPublication.ExportToQVDB</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">ExportToQVDB – Once finalized, items will be exported to the QVDB to be made publically available.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>ExternalPublication.ExportToPublic</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">ExportToPublic – In addition to the final question, the development history will be made available to the public. The published development history might however be an edited version of the development process that is stored in the database.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+    </SimpleCodeList>
+</gc:CodeList>

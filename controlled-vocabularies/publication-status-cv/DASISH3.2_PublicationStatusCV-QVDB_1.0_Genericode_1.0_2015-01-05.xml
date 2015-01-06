@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="CodeList.xsl"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ESSERIC-CV="urn:ESSERIC-CV" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/codelist/ns/genericode/1.0/ http://docs.oasis-open.org/codelist/cs-genericode-1.0/xsd/genericode.xsd">
+    <Annotation>
+        <Description>
+            <h:div xml:lang="eng-GB" class="Heading">
+                <h:p>DASISH WP3.2 QVDB: Controlled vocabulary for publication status</h:p>
+            </h:div>
+            <h:div xml:lang="eng-GB" class="Description">
+                <h:p>The controlled vocabulary for publication status in the QVDB has been developed for the ESS but could also be used for other surveys. It is intended for metadata elements developed and maintained in the QVDB like variables and coding schemes/classifications</h:p>
+            </h:div>             
+            <h:div xml:lang="eng-GB" class="VersionNotes">
+                <h:p></h:p>
+            </h:div>
+            <h:div xml:lang="eng-GB" class="VersionChanges">
+                <h:p></h:p>
+            </h:div>
+        </Description>
+    </Annotation>
+    <Identification>
+        <ShortName>PublicationStatusCV</ShortName>
+        <LongName xml:lang="eng-GB">Controlled Vocabulary for publication status</LongName>
+        <Version>1.0</Version>
+        <CanonicalUri>urn:esseric-cv:PublicationStatusCV-QVDB</CanonicalUri>
+        <CanonicalVersionUri>urn:esseric-cv:PublicationStatusCV-QVDB:1.0</CanonicalVersionUri>
+        <!-- Fake Uri for now, will be changed after the server ready -->
+        <LocationUri>https://dasish-dev.nsd.no/api/ddi/PublicationStatusCV-QVDB_1.0_Genericode_1.0.xml</LocationUri>
+        <AlternateFormatLocationUri MimeType="text/html">https://dasish-dev.nsd.no/api/ddi/PublicationStatusCV-QVDB_1.0.htm</AlternateFormatLocationUri>
+        <AlternateFormatLocationUri MimeType="application/vnd.ms-excel">https://dasish-dev.nsd.no/api/ddi/PublicationStatusCV-QVDB_1.0.xlsx</AlternateFormatLocationUri>
+        <!-- Fake above -->
+        <Agency>
+            <ShortName>ESSERIC</ShortName>
+            <LongName xml:lang="eng-GB">European Social Survey Eric</LongName>
+            <Identifier>DDIForESSERIC</Identifier>
+        </Agency>
+    </Identification>
+    
+    <ColumnSet>
+        <Column Use="required" Id="Code">
+            <ShortName>Code</ShortName>
+            <LongName xml:lang="eng-GB">Value of the Code</LongName>
+            <Data Type="string"/>    
+        </Column>
+        <Column Use="required" Id="Definition">
+            <ShortName>Definition</ShortName>
+            <LongName xml:lang="eng-GB">Definition of the Code</LongName>
+            <Data Type="string"/>
+        </Column>
+    </ColumnSet>
+    
+    <SimpleCodeList>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>Development.NotPublished</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">Development – Made available for the Archive QVDB Team, but not designed to be published internally.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>InternalPublication.AvailableForProjectPartners</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">AvailableForProjectPartners – Items made available internally for project partners for use in the different steps of the production/archive pipeline. For example, when creating data protocols and setup-files (dictionaries) for the national teams.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>InternalPublication.ExportToTMT</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">ExportToTMT – Items made available for ‘export’ to TMT. For example, export of country-specific code lists from classification schemes developed and maintained in the QVDB for reuse in the TMT.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>InternalPublication.ExportToQDDT</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">ExportToQDDT – Once finalized, items will be exported to the QDDT. Categories can ,for example, be reused in response domains in QDDT.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+        <Row>
+            <Value ColumnRef="Code">
+                <SimpleValue>ExternalPublication.ExportToPublic</SimpleValue>
+            </Value>
+            <Value ColumnRef="Definition">
+                <ComplexValue>
+                    <ESSERIC-CV:Value xml:lang="eng-GB">ExportToPublic – The final items will be made available to the public. For example, when preparing lists or other data documentation for data release.</ESSERIC-CV:Value>
+                </ComplexValue>
+            </Value>
+        </Row>
+    </SimpleCodeList>
+</gc:CodeList>
